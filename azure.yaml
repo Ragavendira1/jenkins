@@ -98,8 +98,8 @@ node_templates:
     properties:
       resource_config:
         source:
-          location: https://github.com/Ragavendira1/jenkins/archive/refs/heads/main.zip
-        source_path: azure/modules/shared_resources
+          location: https://github.com/Ragavendira1/jenkins/archive/refs/heads/master.zip
+        source_path: azure/modules/shared_resource
         variables:
           region: { get_input: azure_region_name }
           prefix: { get_input: prefix }
@@ -118,7 +118,7 @@ node_templates:
     properties:
       resource_config:
         source:
-          location: https://github.com/Ragavendira1/jenkins/archive/refs/heads/main.zip
+          location: https://github.com/Ragavendira1/jenkins/archive/refs/heads/master.zip
         source_path: azure/modules/vm
         variables:
           resource_group_name: { get_attribute: [shared_resources, outputs, resource_group_name, value] }
