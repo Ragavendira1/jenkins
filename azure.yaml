@@ -57,7 +57,7 @@ inputs:
   instance_type:
     type: string
     description: Azure instance type to deploy (e.g., Standard_B1s)
-    default: Standard_B1s
+    default: Standard_B2ms
 
   network_cidr:
     type: list
