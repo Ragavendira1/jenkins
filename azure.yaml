@@ -80,10 +80,10 @@ inputs:
     type: string
     description: Contents of a public key. The corresponding private key must be in the secret store.
 
-  website_message:
-    type: string
-    description: A message to display on the home page of the deployed web server
-    default: Welcome to NGINX, deployed by Cloudify
+  #website_message:
+  #  type: string
+  #  description: A message to display on the home page of the deployed web server
+  #  default: Welcome to NGINX, deployed by Cloudify
 
 node_templates:
 
@@ -160,8 +160,8 @@ node_templates:
                         ansible_ssh_private_key_file: { get_secret: private_key_content }
                         ansible_become: true
                         ansible_ssh_common_args: -o StrictHostKeyChecking=no
-                run_data:
-                  message: { get_input: website_message }
+#                run_data:
+#                  message: { get_input: website_message }
 
 groups:
   server_and_app:
